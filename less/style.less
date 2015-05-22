@@ -4,12 +4,12 @@
 @light-grey: #F5F5F5;
 @mid-grey: #E9E9E9;
 @dark-green: #006666;
-@green: #008584;
+@green: #00bcbb;
 @dark-grey: CCCCCC;
 
 
+
 body {
-  background-color: @light-grey;
   font-family: 'Lato', sans-serif;
   font-size: @size;
 }
@@ -23,6 +23,13 @@ img {
   border-radius: 6px;
 }
 
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 #pagewrap {
   width: 980px;
   margin: 0 auto;
@@ -31,6 +38,10 @@ img {
 .content {
   margin: auto;
   width: 70%;
+}
+
+.email {
+  font-size: 20px;
 }
 
 #header {
@@ -52,8 +63,8 @@ img {
 
   li {
     :hover {
-      transition: color 0.5s;
-      color: @green;
+      transition: color 0.7s;
+      color: #00a3a2
     }
     margin: 0;
     padding: 14px;
@@ -63,11 +74,14 @@ img {
   }
 
   a {
-    color: @mid-grey;
+    color: #ffffff;
     padding: 14px;
   }
 
   .active {
-    color: @light-grey;
+    :hover {
+      transition: none;
+    }
+    color: #ff9736;
   }
 }
