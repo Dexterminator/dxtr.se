@@ -5,6 +5,7 @@
 @dark-green: #006666;
 @green: #00bcbb;
 @dark-grey: #424242;
+@orange: #ff9736;
 
 body {
   font-family: 'Lato', sans-serif;
@@ -15,7 +16,7 @@ a {
   text-decoration: none;
   color: @green;
   &:hover {
-    color: #ff0054;
+    color: rgba(0, 188, 187, 0.61);
   }
 }
 
@@ -81,10 +82,20 @@ hr {
       color: #00a3a2
     }
     &.active {
-      color: #ff9736;
+      color: @orange;
       &:hover {
-        color: #FF9736;
+        color: @orange;
       }
     }
+  }
+}
+
+@media(max-width: 980px) {
+  #pagewrap {
+    width: 90%;
+  }
+
+  .content {
+    width: 80%;
   }
 }
