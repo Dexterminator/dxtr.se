@@ -63,15 +63,18 @@ hr {
   font-weight: 300;
 
   li {
-    :hover {
-      transition: color 0.2s;
-      color: #00a3a2
-    }
     margin: 0;
     padding: 14px;
     list-style: none;
     float: left;
     position: relative;
+    :hover {
+      transition: color 0.2s;
+      color: #00a3a2
+    }
+    .active {
+      color: #ff9736;
+    }
   }
 
   a {
@@ -79,10 +82,5 @@ hr {
     padding: 14px;
   }
 
-  .active {
-    :hover {
-      transition: none;
-    }
-    color: #ff9736;
-  }
+
 }
