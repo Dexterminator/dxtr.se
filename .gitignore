@@ -108,3 +108,6 @@ crashlytics-build.properties
 
 #using less, ignore css
 public/stylesheets/*.css
+
+#heroku
+/*.env
