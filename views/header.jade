@@ -1,8 +1,9 @@
 header#header
-  nav
-    ul#main-nav
+  nav#main-nav
+    a.main-name(href='/') Dexter Gramfors
+    ul
       li
-        a(href='/', class={active: currentPage === 'index'}) Dexter Gramfors
+        a(href='/', class={active: currentPage === 'index'}) Me
       li
         a(href='projects', class={active: currentPage === 'projects'}) Projects
       li
