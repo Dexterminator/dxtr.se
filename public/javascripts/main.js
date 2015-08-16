@@ -5,6 +5,7 @@ $(function () {
   var $contactHeader = $('#contact-header');
   var scrollDuration = 700;
   setScrollOnNavClicks($body, scrollDuration, $projectsHeader, $cvHeader, $contactHeader);
+  setNavActiveStatusOnScroll($contactHeader, $cvHeader, $projectsHeader);
 });
 
 function setScrollOnNavClicks($body, scrollDuration, $projectsHeader, $cvHeader, $contactHeader) {
@@ -27,3 +28,26 @@ function setSectionScroll(sectionNavId, sectionHeader, $body, scrollDuration) {
   });
 }
 
+function setNavActiveStatusOnScroll($contactHeader, $cvHeader, $projectsHeader) {
+  var $window = $(window);
+  var currentNav = '#me-nav';
+  $window.scroll(function () {
+    var scrolled = $window.scrollTop() + 40;
+    var newNav;
+    if (scrolled > $contactHeader.offset().top) {
+      newNav = '#contact-nav';
+    } else if (scrolled > $cvHeader.offset().top) {
+      newNav = '#cv-nav';
+    } else if (scrolled > $projectsHeader.offset().top) {
+      newNav = '#projects-nav';
+    } else {
+      newNav = '#me-nav';
+    }
+
+    if (newNav !== currentNav) {
+      $(currentNav).removeClass('active');
+      currentNav = newNav;
+      $(currentNav).addClass('active');
+    }
+  });
+}
