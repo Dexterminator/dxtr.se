@@ -20,7 +20,7 @@ function setScrollOnNavClicks($body, scrollDuration, $projectsHeader, $cvHeader,
 
 function setSectionScroll(sectionNavId, sectionHeader, $body, scrollDuration) {
   $(sectionNavId).click(function () {
-    var topOffset = sectionHeader.offset().top - sectionHeader.height();
+    var topOffset = sectionHeader.offset().top;
     $body.animate({
       scrollTop: topOffset
     }, scrollDuration);
