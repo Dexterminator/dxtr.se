@@ -4,32 +4,26 @@ $(function () {
   var $cvHeader = $('#cv-header');
   var $contactHeader = $('#contact-header');
   var scrollDuration = 700;
+  setScrollOnNavClicks($body, scrollDuration, $projectsHeader, $cvHeader, $contactHeader);
+});
 
+function setScrollOnNavClicks($body, scrollDuration, $projectsHeader, $cvHeader, $contactHeader) {
   $('#me-nav').click(function () {
     $body.animate({
       scrollTop: 0
     }, scrollDuration);
   });
+  setSectionScroll('#projects-nav', $projectsHeader, $body, scrollDuration);
+  setSectionScroll('#cv-nav', $cvHeader, $body, scrollDuration);
+  setSectionScroll('#contact-nav', $contactHeader, $body, scrollDuration);
+}
 
-  $('#projects-nav').click(function () {
-    var topOffset = $projectsHeader.offset().top - $projectsHeader.height();
+function setSectionScroll(sectionNavId, sectionHeader, $body, scrollDuration) {
+  $(sectionNavId).click(function () {
+    var topOffset = sectionHeader.offset().top - sectionHeader.height();
     $body.animate({
       scrollTop: topOffset
     }, scrollDuration);
   });
+}
 
-  $('#cv-nav').click(function () {
-    var topOffset = $cvHeader.offset().top - $cvHeader.height();
-    $body.animate({
-      scrollTop: topOffset
-    }, scrollDuration);
-  });
-
-  $('#contact-nav').click(function () {
-    var topOffset = $contactHeader.offset().top - $contactHeader.height();
-    $body.animate({
-      scrollTop: topOffset
-    }, scrollDuration);
-  });
-
-});
