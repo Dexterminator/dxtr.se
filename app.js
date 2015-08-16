@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var  lessMiddleware = require("less-middleware");
+var lessMiddleware = require("less-middleware");
 var app = express();
 
 // view engine setup

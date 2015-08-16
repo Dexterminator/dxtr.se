@@ -30,6 +30,7 @@ h3 {
 a {
   text-decoration: none;
   color: @green;
+  cursor: pointer;
   &:hover {
     color: rgba(0, 188, 187, 0.61);
   }
@@ -76,12 +77,10 @@ hr {
   height: inherit;
   background-color: @dark-green;
   width: 100%;
-  left: 0;
-  bottom: 0;
   z-index: 100;
   margin: 0;
   padding: 0;
-  position: relative;
+  position: fixed;
   font-weight: 300;
 
   .main-name {
@@ -136,4 +135,11 @@ hr {
 
 #goat-desktop {
   display: inline-block;
+}
+
+#contact-filler {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 85%;
 }
