@@ -6,28 +6,7 @@ block files
 block content
   div
   .content
-    h1 Me
-    p Who am I?
-    hr
-    br
-    img(src='images/me.png')
-    p#about-me.
-      A 23-year-old swedish computer science student,
-      currently studying at KTH Royal Institute of Techonology,
-      and working extra as a software developer at Digpro AB.
-      I like to code, play video games and electric guitar, and to learn new things.
-    p Some me-related links:
-      ul
-        li
-          a(href='http://www.reverbnation.com/fatherandson', target='_blank') My band, Father & Son
-        li
-          a(href='https://www.linkedin.com/in/dextergramfors', target='_blank') My LinkedIn profile
-        li
-          a(href='https://trakt.tv/users/dexterminator/ratings/all/all/highest', target='_blank') Movies I've rated
-        li
-          a(href='http://www.kth.se/en', target='_blank') Where I study
-        li
-          a(href='http://www.digpro.se/index.php/en/', target='_blank') Where I work
+    include ./me
     include ./projects
     include ./cv
     include ./contact
