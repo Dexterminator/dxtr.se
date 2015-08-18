@@ -10,9 +10,7 @@ $(function () {
 
 function setScrollOnNavClicks($body, scrollDuration, $projectsHeader, $cvHeader, $contactHeader) {
   $('#me-nav').click(function () {
-    $body.animate({
-      scrollTop: 0
-    }, scrollDuration);
+    $body.animate({scrollTop: 0}, scrollDuration);
   });
   setSectionScroll('#projects-nav', $projectsHeader, $body, scrollDuration);
   setSectionScroll('#cv-nav', $cvHeader, $body, scrollDuration);
