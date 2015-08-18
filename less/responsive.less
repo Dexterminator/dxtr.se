@@ -34,13 +34,23 @@
   }
 }
 
+@media(max-width: 650px) {
+  #main-nav {
+
+    li {
+      padding: 0px 15% 0px 0px;
+    }
+  }
+
+}
+
 @media(max-width: 560px) {
   .content {
     width: 95%;
   }
 
-  #header {
-    height: 60px;
+  h1 {
+    font-size: 60px;
   }
 
   #main-nav {
@@ -52,13 +62,7 @@
     }
 
     li {
-      padding: 0px 18% 0px 0px;
-      &:first-child {
-        padding-left: 1px;
-      }
-      &:last-child {
-        padding-right: 1px;
-      }
+      padding: 0px 13% 0px 0px;
     }
   }
 
@@ -71,14 +75,12 @@
   }
 }
 
-@media(max-width: 360px) {
-  .content {
-    width: 95%;
-  }
+@media(max-width: 450px) {
 
   #main-nav {
     li {
-      padding: 0px 14% 0px 0px;
+      font-size: 20px;
     }
   }
 }
+
