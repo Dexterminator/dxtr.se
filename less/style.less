@@ -6,6 +6,7 @@
 @green: #00bcbb;
 @dark-grey: #424242;
 @orange: #ff9736;
+@pagewrap-width: 980px;
 
 body {
   font-family: 'Lato', sans-serif;
@@ -66,7 +67,7 @@ hr {
 }
 
 #pagewrap {
-  width: 980px;
+  width: @pagewrap-width;
   margin: 0 auto;
 }
 
@@ -90,16 +91,18 @@ hr {
   padding: 0;
   position: fixed;
   font-weight: 300;
+  display: flex;
+  justify-content: center;
 
   ul {
-    top: -3px;
-    margin-top: 20px;
-    text-align: center;
+    width: @pagewrap-width / 1.1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
   li {
-    padding-right: 120px;
-    display: inline;
+    display: flex;
     list-style: none;
 
     a {
