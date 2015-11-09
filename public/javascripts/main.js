@@ -34,10 +34,10 @@ function setNavActiveStatusOnScroll($contactHeader, $cvHeader, $projectsHeader) 
     var newNav;
     if (scrolled > $contactHeader.offset().top) {
       newNav = '#contact-nav';
-    } else if (scrolled > $cvHeader.offset().top) {
-      newNav = '#cv-nav';
     } else if (scrolled > $projectsHeader.offset().top) {
       newNav = '#projects-nav';
+    } else if (scrolled > $cvHeader.offset().top) {
+      newNav = '#cv-nav';
     } else {
       newNav = '#me-nav';
     }
