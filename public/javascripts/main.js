@@ -6,7 +6,23 @@ $(function () {
   var scrollDuration = 700;
   setScrollOnNavClicks($body, scrollDuration, $projectsHeader, $cvHeader, $contactHeader);
   setNavActiveStatusOnScroll($contactHeader, $cvHeader, $projectsHeader);
+  startImageFades();
 });
+
+function startImageFades() {
+  var meImages = _.map($('#me-images').children(), function(child) {return $(child)})
+  var i = 0;
+  var interval = 4000;
+  function setNextFade () {
+    console.log('next fade');
+    meImages[i].toggleClass('disabled-image')
+    i = (i + 1) % meImages.length;
+    meImages[i].toggleClass('disabled-image')
+    setTimeout(setNextFade, interval);
+  }
+
+  setTimeout(setNextFade, interval);
+}
 
 function setScrollOnNavClicks($body, scrollDuration, $projectsHeader, $cvHeader, $contactHeader) {
   $('#me-nav').click(function () {
