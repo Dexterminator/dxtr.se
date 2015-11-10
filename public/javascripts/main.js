@@ -13,9 +13,9 @@ function startImageFades() {
   var meImages = _.map($('#me-images').children(), function(child) {return $(child)})
   var i = 0;
   setInterval(function() {
-    meImages[i].toggleClass('disabled-image')
+    meImages[i].toggleClass('disabled-image');
     i = (i + 1) % meImages.length;
-    meImages[i].toggleClass('disabled-image')
+    meImages[i].toggleClass('disabled-image');
   }, 4000);
 }
 
