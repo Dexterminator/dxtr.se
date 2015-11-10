@@ -12,16 +12,11 @@ $(function () {
 function startImageFades() {
   var meImages = _.map($('#me-images').children(), function(child) {return $(child)})
   var i = 0;
-  var interval = 4000;
-  function setNextFade () {
-    console.log('next fade');
+  setInterval(function() {
     meImages[i].toggleClass('disabled-image')
     i = (i + 1) % meImages.length;
     meImages[i].toggleClass('disabled-image')
-    setTimeout(setNextFade, interval);
-  }
-
-  setTimeout(setNextFade, interval);
+  }, 4000);
 }
 
 function setScrollOnNavClicks($body, scrollDuration, $projectsHeader, $cvHeader, $contactHeader) {
