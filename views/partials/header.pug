@@ -1,7 +1,7 @@
 header
   nav
     .nav-content
-      a#me-nav.active Me
-      a#cv-nav CV
-      a#projects-nav Projects
-      a#contact-nav Contact
+      a#me-nav.active(onclick='scrollToTop()') Me
+      a#cv-nav(onclick='scrollToId("cv-header")') CV
+      a#projects-nav(onclick='scrollToId("projects-header")') Projects
+      a#contact-nav(onclick='scrollToId("contact-header")') Contact
