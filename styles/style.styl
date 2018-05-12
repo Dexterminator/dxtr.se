@@ -1,0 +1,142 @@
+@import 'nib'
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
+color-light-grey = #F5F5F5
+color-mid-grey = #E9E9E9
+color-dark-green = #006666
+color-green = #00bcbb
+color-dark-grey = #424242
+color-orange = #ff9736
+
+breakpoint-medium = 600px
+breakpoint-large = 890px
+
+pagewrap-width-small = 90%
+pagewrap-width-large = 800px
+
+body
+  font-family 'Lato', sans-serif
+  font-size 1.4rem
+  font-weight 300
+  margin 0
+  padding 0
+  color color-dark-grey
+
+h1
+  font-weight 300
+  font-size 3.5rem
+  @media (min-width breakpoint-medium)
+    font-size 4.5rem
+
+h2
+  font-size 2.5rem
+  font-weight 300
+
+h4
+  font-weight 400
+
+a
+  text-decoration none
+  color color-green
+  cursor pointer
+  &:hover
+    color rgba(0, 188, 187, 0.61)
+  transition color 0.5s ease
+
+img
+  border-radius 6px
+  max-width 100% !important
+  height auto
+  display block
+
+hr
+  border 0
+  height 0
+  border-top 1px solid rgba(0, 0, 0, 0.1)
+  border-bottom 1px solid rgba(255, 255, 255, 0.3)
+
+#pagewrap
+  width pagewrap-width-small
+  margin 0 auto
+  @media (min-width breakpoint-large)
+    width pagewrap-width-large
+
+#header
+  position relative
+  height 5rem
+
+#main-nav
+  height inherit
+  background-color color-mid-grey
+  width 100%
+  z-index 100
+  margin 0
+  padding 0
+  position fixed
+  font-weight 300
+  display flex
+  justify-content center
+  align-items center
+
+nav-content
+  font-size 1.4rem
+  display flex
+  justify-content space-between
+  width pagewrap-width-small
+
+  @media (min-width breakpoint-medium)
+    font-size 1.9rem
+
+  @media (min-width breakpoint-large)
+    width pagewrap-width-large
+
+  a
+    &:hover
+      transition color 0.2s
+      color #00a3a2
+
+    &.active
+      color color-orange
+      &:hover
+        color color-orange
+
+#me-images
+  position relative
+  width 300px
+  height 300px
+
+  img
+    position absolute
+    left 0
+    transition opacity 2s ease-in-out
+    opacity 0
+
+    &.active-image
+      opacity 1
+
+#whatshappening-1
+  display inline-block
+  padding-right 4px
+
+#whatshappening-2
+  display inline-block
+
+#goat-android
+  display inline-block
+  padding-right 4px
+
+#goat-desktop
+  display inline-block
+
+#small-projects
+  li
+    margin-bottom 10px
+
+#contact-filler
+  height 70vh
+
+#me-header
+  font-weight 900
+
+.section-header
+  padding-top 70px

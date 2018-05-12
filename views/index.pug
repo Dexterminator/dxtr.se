@@ -1,12 +1,9 @@
-extends layout
-
-block files
-  script(src='javascripts/main.js')
+extends partials/layout
 
 block content
   div
   .content
-    include ./me
-    include cv
-    include ./projects
-    include contact
+    include partials/me
+    include partials/cv
+    include partials/projects
+    include partials/contact
