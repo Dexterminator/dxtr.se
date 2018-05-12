@@ -1,3 +1,5 @@
+- var age = new Date(Date.now() - new Date('1991-10-12').getTime()).getUTCFullYear() - 1970
+
 h1#me-header DEXTER GRAMFORS
 p Who's that?
 hr
@@ -7,7 +9,7 @@ br
   img(src='images/guitar.png')
   img(src='images/att_park.png')
 p#about-me.
-  A 25-year-old Swedish software engineer, working at TriOptima AB.
+  A #{age}-year-old Swedish software engineer, working at TriOptima AB.
   I like to code, play video games and electric guitar, and to learn new things.
 p Some me-related links:
   ul
