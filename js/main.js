@@ -14,16 +14,6 @@ function scrollToTop() {
   });
 }
 
-function startImageFades() {
-  var meImages = document.getElementById('me-images').children;
-  var i = 0;
-  setInterval(function () {
-    meImages[i].classList.toggle('active-image');
-    i = (i + 1) % meImages.length;
-    meImages[i].classList.toggle('active-image');
-  }, 4000);
-}
-
 var navs = ['contact', 'projects', 'cv'];
 
 function getCurrentActiveNav() {
@@ -52,6 +42,5 @@ function setNavActiveStatusOnScroll() {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  startImageFades();
   setNavActiveStatusOnScroll();
 });
