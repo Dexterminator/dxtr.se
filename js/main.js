@@ -14,7 +14,7 @@ function scrollToTop() {
   });
 }
 
-var navs = ['contact', 'projects', 'cv'];
+var navs = ['contact', 'cv', 'projects'];
 
 function getCurrentActiveNav() {
   var scrolled = window.scrollY + 40;
