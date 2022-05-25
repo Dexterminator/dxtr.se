@@ -26,7 +26,7 @@ gulp.task('html', function () {
 
 gulp.task('css', function () {
   return gulp.src(styles)
-    .pipe(stylus({use: [nib()]}))
+    .pipe(stylus({ use: [nib()] }))
     .pipe(minifyCSS())
     .pipe(gulp.dest(buildDest + '/css'))
 });
@@ -50,10 +50,10 @@ gulp.task('watch', function () {
     }
   });
 
-  gulp.watch([html, css, bundle], {cwd: buildDest}, reload);
-  gulp.watch(views, ['html']);
-  gulp.watch(styles, ['css']);
-  gulp.watch(javaScripts, ['js']);
+  gulp.watch([html, css, bundle], { cwd: buildDest }, reload);
+  gulp.watch(views, gulp.series('html'));
+  gulp.watch(styles, gulp.series('css'));
+  gulp.watch(javaScripts, gulp.series('js'));
 });
 
-gulp.task('default', ['html', 'css', 'js']);
+gulp.task('default', gulp.series('html', 'css', 'js'));
