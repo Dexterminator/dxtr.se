@@ -1,6 +1,8 @@
 @import 'nib'
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 @import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 
 color-light-grey = #F5F5F5
 color-mid-grey = #E9E9E9
@@ -17,32 +19,59 @@ pagewrap-width-large = 800px
 
 body
   font-family 'Jura', sans-serif
+  overflow hidden
   font-size 1.4rem
-  font-weight 300
+  color color-dark-grey
   margin 0
   padding 0
-  color color-dark-grey
+
+main
+  padding 0
+  margin 0
+  width 100%
+  height 100vh
+  overflow-y scroll
+  scroll-snap-points-y repeat(100vh)
+  scroll-snap-type: y mandatory
+  -ms-overflow-style none /* IE and Edge */
+  scrollbar-width none /* Firefox */
+  &::-webkit-scrollbar
+    display none
+
+section
+  width 100%
+  height 100vh
+  display flex
+  align-items flex-start
+  scroll-snap-align center
+  div
+    margin 0 auto
+
+section.me
+  background-color white
+
+section.imperimetric
+  background-color rgb(14, 105, 108)
+  color white
+  h1
+    font-family 'Pacifico', cursive
+    margin-top 0.3rem
+
+img#imperimetric-screenshot
+  width 90%
+  @media (min-width breakpoint-medium)
+    max-width 80vh
 
 h1
-  font-weight 300
-  font-size 3.5rem
+  margin-top 0.3em
+  margin-bottom 0.5em
+  text-align center
+  font-size 3rem
   @media (min-width breakpoint-medium)
-    font-size 4.5rem
+    font-size 4.2rem
 
 h2
   font-size 2.5rem
-  font-weight 300
-
-h4
-  font-weight 400
-
-a
-  text-decoration none
-  color color-green
-  cursor pointer
-  &:hover
-    color rgba(0, 188, 187, 0.61)
-  transition color 0.5s ease
 
 img
   display block 
@@ -54,81 +83,10 @@ hr
   border-top 1px solid rgba(0, 0, 0, 0.1)
   border-bottom 1px solid rgba(255, 255, 255, 0.3)
 
-#pagewrap
-  width pagewrap-width-small
-  margin 0 auto
-  @media (min-width breakpoint-large)
-    width pagewrap-width-large
-
-header
-  position relative
-  height 5rem
-
-nav
-  height inherit
-  background-color color-mid-grey
-  width 100%
-  z-index 100
-  margin 0
-  padding 0
-  position fixed
-  font-weight 300
-  display flex
-  justify-content center
-  align-items center
-
-.nav-content
-  font-size 1.4rem
-  display flex
-  justify-content space-between
-  width pagewrap-width-small
-
-  @media (min-width breakpoint-medium)
-    font-size 1.9rem
-
-  @media (min-width breakpoint-large)
-    width pagewrap-width-large
-
-  a
-    &:hover
-      transition color 0.2s
-      color #00a3a2
-
-    &.active
-      color color-orange
-      &:hover
-        color color-orange
-
-#whatshappening-1
-  display inline-block
-  padding-right 4px
-
-#whatshappening-2
-  display inline-block
-
-#goat-android
-  display inline-block
-  padding-right 4px
-
-#goat-desktop
-  display inline-block
-
-#small-projects
-  li
-    margin-bottom 10px
-
-#contact-filler
-  height 75vh
-  @media (min-width breakpoint-medium)
-    height 70vh
-
 #me-header
   text-align center
 
-#about-me
+.description
   margin 0 auto
   margin-top 2em
   max-width 20em
-
-.section-header
-  padding-top 70px
