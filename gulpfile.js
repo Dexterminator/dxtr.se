@@ -41,7 +41,7 @@ gulp.task('js', function () {
 });
 
 gulp.task('watch', function () {
-  browserSync({
+  browserSync.init({
     server: {
       baseDir: buildDest,
       serveStaticOptions: {
@@ -50,7 +50,7 @@ gulp.task('watch', function () {
     }
   });
 
-  gulp.watch([html, css, bundle], { cwd: buildDest }, reload);
+  gulp.watch("*.html", {cwd: buildDest}).on("change", reload);
   gulp.watch(views, gulp.series('html'));
   gulp.watch(styles, gulp.series('css'));
   gulp.watch(javaScripts, gulp.series('js'));
