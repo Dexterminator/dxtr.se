@@ -20,10 +20,12 @@ pagewrap-width-large = 800px
 body
   font-family 'Jura', sans-serif
   overflow hidden
-  font-size 1.4rem
   color color-dark-grey
   margin 0
   padding 0
+  font-size 1.2rem
+  @media (min-width breakpoint-medium)
+    font-size 1.4rem
 
 main
   padding 0
@@ -93,7 +95,9 @@ section.me
   color #E8C0D4
 
 img.portrait
-  width 250px
+  width 50%
+  @media (min-width breakpoint-medium)
+    width 250px
 
 section.speglar
   background-color #242338
