@@ -1,8 +1,7 @@
 @import 'nib'
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 @import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
-
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
 
 color-light-grey = #F5F5F5
 color-mid-grey = #E9E9E9
@@ -32,9 +31,9 @@ main
   height 100vh
   overflow-y scroll
   scroll-snap-points-y repeat(100vh)
-  scroll-snap-type: y mandatory
-  -ms-overflow-style none /* IE and Edge */
-  scrollbar-width none /* Firefox */
+  scroll-snap-type y mandatory
+  -ms-overflow-style none
+  scrollbar-width none
   &::-webkit-scrollbar
     display none
 
@@ -47,18 +46,9 @@ section
   div
     margin 0 auto
 
-section.me
-  background-color white
-
-section.imperimetric
-  background-color rgb(14, 105, 108)
-  color white
-  h1
-    font-family 'Pacifico', cursive
-    margin-top 0.3rem
-
-img#imperimetric-screenshot
+img.screenshot
   width 90%
+  box-shadow 4px 4px 2px 1px rgba(0, 0, 0, 0.2)
   @media (min-width breakpoint-medium)
     max-width 80vh
 
@@ -77,12 +67,6 @@ img
   display block 
   margin 0 auto
 
-hr
-  border 0
-  height 0
-  border-top 1px solid rgba(0, 0, 0, 0.1)
-  border-bottom 1px solid rgba(255, 255, 255, 0.3)
-
 #me-header
   text-align center
 
@@ -90,3 +74,23 @@ hr
   margin 0 auto
   margin-top 2em
   max-width 20em
+
+section.me
+  background-color white
+
+section.imperimetric
+  background-color rgb(12, 81, 83)
+  color white
+  h1
+    font-family 'Pacifico', cursive
+    margin-top 0.3rem
+
+section.clj-templates
+  background-color #262626
+  color white
+  h1
+    font-family Inconsolata
+    color #d88d58
+
+.paren
+  color #808080
