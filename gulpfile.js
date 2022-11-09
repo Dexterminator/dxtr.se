@@ -54,7 +54,7 @@ gulp.task('watch', function () {
   gulp.watch("css/*.css", {cwd: buildDest}).on("change", reload);
   gulp.watch(views, gulp.series('html'));
   gulp.watch(styles, gulp.series('css'));
-  gulp.watch(javaScripts, gulp.series('js'));
+  // gulp.watch(javaScripts, gulp.series('js'));
 });
 
-gulp.task('default', gulp.series('html', 'css', 'js'));
+gulp.task('default', gulp.series('html', 'css'));
