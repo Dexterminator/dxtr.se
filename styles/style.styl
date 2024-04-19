@@ -131,15 +131,16 @@ section.clj-templates
 .press-kit-content
   padding 0.5em
   padding-top 1em
+  padding-bottom 1em
   margin 0 auto
   width @css{min(90%, 50em)}
-  height 100vh
 .press-kit-descriptions
   display flex
-  gap 4em
+  gap 8em
   .factsheet
-    width 48em
+    width 55em
 hr
+  margin-top 1em
   border 0;
   height 1px;
   background-image linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
@@ -156,3 +157,16 @@ a.download-all-images
 
 .spacer
   margin-right 0.1em
+
+.image-grid
+  display grid
+  grid-template-columns repeat(2, 1fr)
+  align-items center
+  &.key-art
+    grid-template-columns repeat(4, 1fr)
+  gap 1em
+  img
+    width 100%
+    margin 0
+    &:hover
+      filter brightness(85%)
