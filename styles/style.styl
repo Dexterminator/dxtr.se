@@ -121,24 +121,33 @@ section.clj-templates
 .press-kit
   font-size @css{clamp(1rem, 2.8vw, 0.8rem)}
   font-family Oxanium
+  padding-bottom 10em
   h3
     margin-bottom 0.2em
   iframe
     margin 0
     width @css{min(90%, 70vh)}
   img.press-kit-hero
-    width @css{min(100%, 50em)}
+    width @css{min(100%, 51em)}
+
 .press-kit-content
   padding 0.5em
   padding-top 1em
   padding-bottom 1em
   margin 0 auto
   width @css{min(90%, 50em)}
+
 .press-kit-descriptions
   display flex
-  gap 8em
+  gap 2em
+  flex-direction column
+  @media(min-width 55rem)
+    flex-direction row
+    gap 8em
+
   .factsheet
-    width 55em
+    width @css{min(90%, 50em)}
+
 hr
   margin-top 1em
   border 0;
