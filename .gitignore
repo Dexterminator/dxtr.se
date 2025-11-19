@@ -5,3 +5,4 @@ public/*.html
 node_modules/
 *.iml
 .DS_Store
+.vscode/
