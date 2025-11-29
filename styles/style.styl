@@ -30,8 +30,25 @@ section
   display flex
   align-items flex-start
   scroll-snap-align center
-  div
+  > div
     margin 0 auto
+
+.scroll-down-row
+  display flex
+  justify-content center
+  gap 0.3em
+  margin 0 auto
+
+.swipe-down-anim
+  animation swipeDown 1s ease-in-out infinite
+
+@keyframes swipeDown
+  0%
+    transform translateY(0)
+  50%
+    transform translateY(5px)
+  100%
+    transform translateY(0)
 
 .screenshot
   box-shadow 4px 4px 2px 1px rgba(0, 0, 0, 0.2)
