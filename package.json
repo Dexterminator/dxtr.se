@@ -1,7 +1,4 @@
 {
-  "scripts": {
-    "preinstall": "npx npm-force-resolutions"
-  },
   "dependencies": {
     "browser-sync": "^2.24.4",
     "gulp": "^4.0.2",
@@ -13,7 +10,7 @@
     "gulp-uglify": "^3.0.0",
     "nib": "^1.1.2"
   },
-  "resolutions": {
+  "overrides": {
     "graceful-fs": "^4.2.4",
     "glob-parent": "^6.0.1"
   }

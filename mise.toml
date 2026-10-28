@@ -1,0 +1,18 @@
+[tools]
+node = "24"
+
+[tasks.install]
+description = "Install npm dependencies"
+run = "npm install"
+sources = ["package.json", "package-lock.json"]
+outputs = ["node_modules/.package-lock.json"]
+
+[tasks.build]
+description = "Build HTML and CSS into public/"
+depends = ["install"]
+run = "npx gulp"
+
+[tasks.dev]
+description = "Serve public/ with live reload and rebuild on changes"
+depends = ["build"]
+run = "npx gulp watch"
