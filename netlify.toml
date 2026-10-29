@@ -1,0 +1,6 @@
+[build]
+command = "gulp"
+publish = "public"
+
+[build.environment]
+NODE_VERSION = "24"
